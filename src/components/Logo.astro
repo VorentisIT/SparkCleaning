@@ -1,0 +1,28 @@
+---
+import Image from "astro/components/Image.astro";
+const { mode = "light" } = Astro.props;
+---
+
+<a href="/" class="logo inline-flex items-center">
+  <Image
+    src={mode === "light" ? "/img/logo.png" : "/img/logo-w.png"}
+    alt="SparkClean"
+    width={204}
+    height={46}
+    fetchpriority="high"
+    loading="eager"
+    class={`h-10 sm:h-11 w-auto object-contain ${mode === "light" ? "dark:hidden" : ""}`}
+  />
+  {
+    mode === "light" && (
+      <Image
+        src="/img/logo-w.png"
+        alt="SparkClean"
+        width={204}
+        height={46}
+        loading="eager"
+        class="h-10 sm:h-11 w-auto object-contain hidden dark:block"
+      />
+    )
+  }
+</a>
