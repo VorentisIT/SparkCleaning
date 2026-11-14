@@ -1,98 +1,38 @@
-> ⭐️ Love this theme? Star it to support our work!
+# SparkClean: Professional Cleaning Services Website
 
-# SparkClean: Cleaning services website landing page
+A modern, responsive website for professional cleaning service businesses. Built with Astro and Tailwind CSS, SparkClean helps showcase residential and commercial services, team members, verified customer reviews, blog articles, and booking inquiries.
 
-A modern, responsive landing page for cleaning service businesses. Built with Astro and Tailwind CSS, SparkClean helps showcase services, team, testimonials, and contact information with a fast, professional, and conversion-focused design.
+> ⚡ Built with Astro 6, Tailwind CSS 4 & DaisyUI, and Content Collections — optimized for 100/100 performance, high-DPI clarity, and conversion-focused UX.
 
-> ⚡ Built with Astro 6, Tailwind CSS 4 & DaisyUI, and Markdown — optimized for performance, SEO, and simplicity.
+## Features
 
-![Template Preview](https://github.com/anastasiiaxfr/ProCleaning/blob/main/public/theme/og_1200x630.jpg)
+- ✅ Fast, responsive layout with dark mode support
+- ✅ SEO-friendly with Open Graph meta tags, JSON-LD Schema.org structured data, and PWA manifest
+- ✅ Dynamic Content Collections for Services, Team, and Blog
+- ✅ Verified royalty-free high-resolution photography and custom branding
+- ✅ Clean contact integration with WhatsApp and email channels
 
-## Demo
+## Pages
 
-- ✨ [Live Demo](https://pro-cleaning-eta.vercel.app/)
-- 💨 [PageSpeed Insights Report](https://pagespeed.web.dev/analysis/https-pro-cleaning-eta-vercel-app/i1cp4fvfla?form_factor=mobile)
-- [Sitemap.xml](https://pro-cleaning-eta.vercel.app//sitemap-index.xml)
-- [Robots.txt](https://pro-cleaning-eta.vercel.app//robots.txt)
-- [Schema.org validator](https://search.google.com/test/rich-results/result?id=Xz43gQTsgKUxMJzb-N78WQ)
-- [RSS](https://pro-cleaning-eta.vercel.app/rss.xml)
+- **Home**: Hero, Services overview, Quality guarantees, Team showcase, Customer reviews, Latest news, and Contact section
+- **About Us**: Mission, values, and company journey
+- **Services**: Service catalog and individual service details
+- **Team**: Specialist profiles and direct inquiry links
+- **Blog**: Educational cleaning tips, maintenance guides, and eco-friendly articles
+- **Contact**: Location map details, business hours, and inquiry form
+- **Terms & Privacy**: Comprehensive, customized legal policies
 
-Features:
+## 🚀 Quick Start
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 99+/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and meta tags, Open Graph data, JSON-LD schema and PWA
-- ✅ Sitemap, robots.txt support
-- ✅ Markdown & MDX support
-- ✅ Fully responsive and accessible
-- ✅ Easily deploy to Vercel, Netlify, or Cloudflare Pages
-
-Pages:
-
-- home
-- contacts
-- team
-- team detail
-- service
-- service detail
-- blog
-- blog detail
-- 404 / 500
-
-## PWA support
-
-![pwa](https://github.com/anastasiiaxfr/ProCleaning/blob/main/public/theme/3.jpg)
-
-## Google pages speed
-
-![mobile](https://github.com/anastasiiaxfr/ProCleaning/blob/main/public/theme/1.jpg)
-![desktop](https://github.com/anastasiiaxfr/ProCleaning/blob/main/public/theme/2.jpg)
-
-## Open Graph Card
-
-![Facebook](https://github.com/anastasiiaxfr/ProCleaning/blob/main/public/theme/5.jpg)
-![Telegram](https://github.com/anastasiiaxfr/ProCleaning/blob/main/public/theme/4.jpg)
-
-Main color changed to Luminance color:
-[Luminance color](https://app.contrast-finder.org/result.html?foreground=%23FFF&background=%2336B864&ratio=4.5&isBackgroundTested=true&algo=Rgb&lang=uk)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| `npm run build`           | Build production site to `./dist/`               |
+| `npm run preview`         | Preview build locally before deploying           |
 
 ## 🛠 Credits
 
-Made with ❤️ by [anastasiiaxfr](https://github.com/anastasiiaxfr/ProCleaning)
-
-ProCleaning is inspired by the free [ProCleaning Theme](https://www.figma.com/community/file/1382254995439883455/cleaning-services-website-landing-page)
+Developed by [vorentis-it.com](https://vorentis-it.com)

@@ -16,7 +16,10 @@ import { Image } from "astro:assets";
     quality={90}
     class="absolute inset-0 w-full h-full object-cover object-bottom -z-10"
   />
-  <div class="absolute inset-0 bg-white/80 dark:bg-black/80 md:bg-transparent -z-10"></div>
+  <!-- White background only on the left side behind the text -->
+  <div
+    class="absolute inset-y-0 left-0 w-full sm:w-3/5 md:w-1/2 lg:w-5/12 bg-gradient-to-r from-white/95 via-white/85 to-transparent dark:from-dark/95 dark:via-dark/85 dark:to-transparent -z-10 pointer-events-none"
+  ></div>
   <div class="container z-10">
     <div class="sm:max-w-md md:max-w-xl text-center sm:text-left">
       <p class="text-sm mb-1">Quality cleaning at a fair price.</p>
@@ -27,12 +30,12 @@ import { Image } from "astro:assets";
       </p>
       <div class="mt-6 grid grid-cols-2 gap-4 max-w-sm mx-auto sm:mx-0">
         <a
-          href="#"
+          href="/contact"
           class="btn bg-main border-main text-white rounded-lg hover:bg-green-600"
           >Get Start Now</a
         >
         <a
-          href="#"
+          href="/service"
           class="btn btn-outline hover:bg-white hover:border-white rounded-lg"
           >View all Services</a
         >
