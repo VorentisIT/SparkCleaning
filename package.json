@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "npx wrangler pages deploy dist --project-name sparkclean --commit-dirty=true"
   },
   "dependencies": {
     "@astrojs/mdx": "^6.0.1",
