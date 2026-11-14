@@ -1,6 +1,6 @@
 {
-  "name": "ProCleaning",
-  "short_name": "ProCleaning",
+  "name": "SparkClean",
+  "short_name": "SparkClean",
   "start_url": "/",
   "description": "Specialized, efficient, and thorough cleaning services",
   "display_override": ["window-control-overlay", "minimal-ui"],

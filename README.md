@@ -1,8 +1,8 @@
 > ⭐️ Love this theme? Star it to support our work!
 
-# ProCleaning: Cleaning services website landing page
+# SparkClean: Cleaning services website landing page
 
-A modern, responsive landing page template for cleaning service businesses. Built with Astro and Tailwind CSS, ProCleaning helps cleaning companies showcase their services, team, testimonials, and contact information with a fast, professional, and conversion-focused design.
+A modern, responsive landing page for cleaning service businesses. Built with Astro and Tailwind CSS, SparkClean helps showcase services, team, testimonials, and contact information with a fast, professional, and conversion-focused design.
 
 > ⚡ Built with Astro 6, Tailwind CSS 4 & DaisyUI, and Markdown — optimized for performance, SEO, and simplicity.
 
