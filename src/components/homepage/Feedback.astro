@@ -2,6 +2,44 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import Swiper from "../Swiper.astro";
+
+const testimonials = [
+  {
+    name: "Robert Fox",
+    role: "Business Owner",
+    avatar: "/img/comments/cmnt1.webp",
+    rating: 5,
+    text: "Excellent service! The team was punctual, thorough, and left our office space sparkling clean every week. Highly recommend them for anyone needing a reliable commercial cleaning partner."
+  },
+  {
+    name: "Sarah Jenkins",
+    role: "Homeowner",
+    avatar: "/img/comments/cmnt2.webp",
+    rating: 5,
+    text: "With two kids and pets, keeping the house clean was overwhelming. ProCleaning does an immaculate job with eco-friendly products that are safe for our entire family. A true lifesaver!"
+  },
+  {
+    name: "David Miller",
+    role: "Facility Manager",
+    avatar: "/img/comments/cmnt3.webp",
+    rating: 5,
+    text: "We booked their deep spring cleaning service and were blown away by the attention to detail. Every baseboard, vent, and corner was spotless. Professional and courteous crew."
+  },
+  {
+    name: "Emily Watson",
+    role: "Creative Director",
+    avatar: "/img/comments/cmnt4.webp",
+    rating: 5,
+    text: "Consistent quality every single visit. Their online booking is seamless, pricing is transparent with zero hidden fees, and the cleaners always arrive on time with complete gear."
+  },
+  {
+    name: "Michael Chang",
+    role: "Property Manager",
+    avatar: "/img/comments/cmnt5.webp",
+    rating: 5,
+    text: "We rely on ProCleaning for all our tenant move-out turnarounds. They deliver consistent 5-star results quickly, helping us get properties back on the market with zero delays."
+  }
+];
 ---
 
 <section class="section section-reviews">
@@ -11,7 +49,7 @@ import Swiper from "../Swiper.astro";
         <h2>Feedback About Their Experience With Us</h2>
         <p class="mt-4">
           Read testimonials from our satisfied clients. See how our cleaning
-          services have made a difference in their lives and homes
+          services have made a difference in their lives and homes.
         </p>
       </div>
       <div>
@@ -22,143 +60,60 @@ import Swiper from "../Swiper.astro";
           prev="swiper-prev"
           next="swiper-next"
         >
-          <div class="swiper-slide">
-            <article
-              class="rounded-xl p-10 grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
-            >
-              <Image
-                src="/img/comments/cmnt1.webp"
-                alt=""
-                format="webp"
-                quality={45}
-                width="100"
-                height="100"
-                class="w-full h-auto max-w-25"
-              />
-              <div class="grid gap-0">
-                <div class="flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <p class="text-lg font-semibold">Robert Fox</p>
-                    <p>Business Man</p>
+          {
+            testimonials.map((item) => (
+              <div class="swiper-slide">
+                <article
+                  class="rounded-xl p-8 sm:p-10 grid grid-cols-1 sm:grid-cols-[90px_1fr] gap-5 items-center border border-gray-200 dark:border-gray-800 border-t-4 border-t-main border-r-4 border-r-main bg-white dark:bg-dark relative shadow-sm"
+                >
+                  <div class="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-main/30 mx-auto sm:mx-0">
+                    <Image
+                      src={item.avatar}
+                      alt={item.name}
+                      format="webp"
+                      quality={90}
+                      width={160}
+                      height={160}
+                      class="w-full h-full object-cover"
+                    />
                   </div>
-                  <Image
-                    src="/img/icons/quote.svg"
-                    width="50"
-                    height="50"
-                    alt="quote"
-                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
-                  />
-                </div>
+                  <div class="grid gap-1">
+                    <div class="flex flex-wrap justify-between items-center gap-4">
+                      <div>
+                        <p class="text-lg font-semibold">{item.name}</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">{item.role}</p>
+                      </div>
+                      <Image
+                        src="/img/icons/quote.svg"
+                        width={40}
+                        height={40}
+                        alt="quote"
+                        class="w-8 h-8 opacity-40 absolute top-4 right-4"
+                      />
+                    </div>
 
-                <div class="flex gap-1 items-center text-yellow-500 mt-2 mb-4">
-                  {
-                    Array.from({ length: 5 }).map((star) => (
-                      <Icon name="heroicons:star-solid" size={24} />
-                    ))
-                  }
-                </div>
+                    <div class="flex gap-1 items-center text-yellow-500 my-2">
+                      {
+                        Array.from({ length: item.rating }).map(() => (
+                          <Icon name="heroicons:star-solid" size={20} />
+                        ))
+                      }
+                    </div>
 
-                <p class="text-sm">
-                  Excellent service! The team was punctual, thorough, and left
-                  my home sparkling clean. Highly recommend for anyone needing a
-                  reliable and detailed cleaning service
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="swiper-slide">
-            <article
-              class="rounded-xl p-10 grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
-            >
-              <Image
-                src="/img/comments/cmnt1.webp"
-                alt=""
-                format="webp"
-                quality={45}
-                width="100"
-                height="100"
-                class="w-full h-auto max-w-25"
-              />
-              <div class="grid gap-0">
-                <div class="flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <p class="text-lg font-semibold">Robert Fox</p>
-                    <p>Business Man</p>
+                    <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                      "{item.text}"
+                    </p>
                   </div>
-                  <Image
-                    src="/img/icons/quote.svg"
-                    width="50"
-                    height="50"
-                    alt="quote"
-                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
-                  />
-                </div>
-
-                <div class="flex gap-1 items-center text-yellow-500 mb-4">
-                  {
-                    Array.from({ length: 5 }).map((star) => (
-                      <Icon name="heroicons:star-solid" size={24} />
-                    ))
-                  }
-                </div>
-
-                <p class="text-sm">
-                  Excellent service! The team was punctual, thorough, and left
-                  my home sparkling clean. Highly recommend for anyone needing a
-                  reliable and detailed cleaning service
-                </p>
+                </article>
               </div>
-            </article>
-          </div>
-          <div class="swiper-slide">
-            <article
-              class="rounded-xl p-10 grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
-            >
-              <Image
-                src="/img/comments/cmnt1.webp"
-                alt=""
-                format="webp"
-                quality={45}
-                width="100"
-                height="100"
-                class="w-full h-auto max-w-25"
-              />
-              <div class="grid gap-0">
-                <div class="flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <p class="text-lg font-semibold">Robert Fox</p>
-                    <p>Business Man</p>
-                  </div>
-                  <Image
-                    src="/img/icons/quote.svg"
-                    width="50"
-                    height="50"
-                    alt="quote"
-                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
-                  />
-                </div>
-
-                <div class="flex gap-1 items-center text-yellow-500 mb-4">
-                  {
-                    Array.from({ length: 5 }).map((star) => (
-                      <Icon name="heroicons:star-solid" size={24} />
-                    ))
-                  }
-                </div>
-
-                <p class="text-sm">
-                  Excellent service! The team was punctual, thorough, and left
-                  my home sparkling clean. Highly recommend for anyone needing a
-                  reliable and detailed cleaning service
-                </p>
-              </div>
-            </article>
-          </div>
+            ))
+          }
         </Swiper>
       </div>
     </div>
   </div>
 </section>
+
 <script>
   import Swiper from "swiper";
   import { Navigation } from "swiper/modules";
